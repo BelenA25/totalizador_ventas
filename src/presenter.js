@@ -5,6 +5,7 @@ const form = document.querySelector("#totalizador-form")
 const precio_resultado = document.querySelector("#precio-span")
 const items_resultado = document.querySelector("#items-span")
 const estado_resultado = document.querySelector("#estado-span")
+const estado_impuesto_resultado = document.querySelector("#estado-impuesto-span")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -14,4 +15,23 @@ form.addEventListener("submit", (event) => {
   items_resultado.innerHTML = items.value;
   precio_resultado.innerHTML = precio.value;
   estado_resultado.innerHTML = estado.value;
+  let impuesto;
+  switch (estado.value) {
+    case "ut":
+      impuesto = 6.65; 
+      break;
+    case "nv":
+      impuesto = 8; 
+      break;
+    case "tx":
+      impuesto = 6.25; 
+      break;
+    case "al":
+      impuesto = 4; 
+      break;
+    case "ca":
+      impuesto = 8.25; 
+      break;
+  }
+  estado_impuesto_resultado.innerHTML = impuesto;
 });
