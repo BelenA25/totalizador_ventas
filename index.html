@@ -7,6 +7,15 @@
       <p></p>
       <label for="cantidad">Precio por item:</label>
       <input type="number" id="precio_item" />
+      <p></p>
+      <label for="estado">Codigo de estado:</label>
+      <select id="estado">
+        <option value="ut">UT</option>
+        <option value="nv">NV</option>
+        <option value="tx">TX</option>
+        <option value="al">AL</option>
+        <option value="ca">CA</option>
+      </select>
       <input type="submit" value="Mostrar" id="mostrar-button" />
     </form>
     Items:
@@ -14,6 +23,9 @@
     <p></p>
     Precio:
     <span id="precio-span"></span>
+    <p></p>
+    Estado:
+    <span id="estado-span"></span>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
