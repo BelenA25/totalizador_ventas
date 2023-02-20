@@ -2,8 +2,7 @@ const items = document.querySelector("#cantidad_items");
 const precio = document.querySelector("#precio_item");
 const estado = document.querySelector("#estado");
 const form = document.querySelector("#totalizador-form")
-const precio_resultado = document.querySelector("#precio-span")
-const items_resultado = document.querySelector("#items-span")
+const precio_neto_resultado = document.querySelector("#precio-neto-span")
 const estado_resultado = document.querySelector("#estado-span")
 const estado_impuesto_resultado = document.querySelector("#estado-impuesto-span")
 
@@ -12,8 +11,7 @@ form.addEventListener("submit", (event) => {
 
   // const firstNumber = Number.parseInt(first.value);
 
-  items_resultado.innerHTML = items.value;
-  precio_resultado.innerHTML = precio.value;
+  precio_neto_resultado.innerHTML = precio.value * items.value;
   estado_resultado.innerHTML = estado.value;
   let impuesto;
   switch (estado.value) {
